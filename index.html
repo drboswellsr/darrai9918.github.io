@@ -1,93 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darrien Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
 </head>
 <body>
 
-    <header>
-        <h1 id="welcomeMessage">Welcome to My Portfolio</h1>
+<h1 id="welcomeMessage">Welcome to My Portfolio</h1>
 
-        <nav>
-            <a href="#about">About</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <main>
+<section id="about">
+<h2>About Me</h2>
+<p>My name is Darrien and I am a Software Development student at ECPI University.</p>
+</section>
 
-        <section id="about">
-            <h2>About Me</h2>
+<section id="projects">
+<h2>Projects</h2>
 
-            <p>
-                My name is Darrien. I am currently a Software Development student at ECPI University.
-                I am learning how to build websites and use programming skills to create simple projects.
-            </p>
+<a href="https://github.com">
+<img src="https://via.placeholder.com/150" alt="Project 1">
+</a>
 
-            <p>
-                This portfolio page is one of my first steps in building an online space for my schoolwork.
-                As I complete more assignments and projects, I plan to update this page with more examples.
-            </p>
-        </section>
+<a href="https://github.com">
+<img src="https://via.placeholder.com/150" alt="Project 2">
+</a>
 
-        <section id="projects">
-            <h2>Projects</h2>
+<a href="https://github.com">
+<img src="https://via.placeholder.com/150" alt="Project 3">
+</a>
+</section>
 
-            <p>
-                The project links below are placeholders for now and will be updated as I complete more work.
-            </p>
+<section id="contact">
+<h2>Contact</h2>
 
-            <a href="https://github.com" target="_blank">
-                <img src="https://via.placeholder.com/200x120?text=Project+1" alt="Project 1">
-            </a>
+<form>
+<input type="text" placeholder="Name"><br><br>
+<input type="email" placeholder="Email"><br><br>
+<input type="text" placeholder="Subject"><br><br>
+<textarea placeholder="Message"></textarea><br><br>
+<button type="submit">Submit</button>
+</form>
+</section>
 
-            <a href="https://github.com" target="_blank">
-                <img src="https://via.placeholder.com/200x120?text=Project+2" alt="Project 2">
-            </a>
+<script>
+// Ask for the user's name
+var name = prompt("Enter your name");
 
-            <a href="https://github.com" target="_blank">
-                <img src="https://via.placeholder.com/200x120?text=Project+3" alt="Project 3">
-            </a>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-
-            <form>
-                <label for="senderName">Sender Name:</label><br>
-                <input type="text" id="senderName" name="senderName"><br><br>
-
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-
-                <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject"><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Darrien</p>
-    </footer>
-
-    <script>
-        // Ask the visitor for their name
-        var userName = prompt("Please enter your name:");
-
-        // Change the welcome message if a name was entered
-        if (userName !== null && userName !== "") {
-            document.getElementById("welcomeMessage").textContent = "Welcome, " + userName + "!";
-        }
-    </script>
+// Display personalized greeting
+if(name){
+document.getElementById("welcomeMessage").innerHTML =
+"Welcome, " + name + "!";
+}
+</script>
 
 </body>
 </html>
