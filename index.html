@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darrien Portfolio</title>
 </head>
 <body>
 
-<h1 id="welcomeMessage">Welcome to My Portfolio</h1>
+    <h1 id="welcomeMessage">Welcome to My Portfolio</h1>
 
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+    </nav>
 
-<section id="about">
-<h2>About Me</h2>
-<p>My name is Darrien and I am a Software Development student at ECPI University.</p>
-</section>
+    <hr>
 
-<section id="projects">
-<h2>Projects</h2>
+    <section id="about">
+        <h2>About Me</h2>
 
-<a href="https://github.com/drboswellsr/SDC330" target="_blank">
-    <img src="https://picsum.photos/150/100?random=1" alt="SDC330 Project">
-</a>
+        <p>
+            My name is Darrien and I am currently a Software Development student at ECPI University.
+            I am learning web development, programming, and software design while building projects
+            throughout my coursework.
+        </p>
 
-<a href="https://github.com/drboswellsr/SDC230L" target="_blank">
-    <img src="https://picsum.photos/150/100?random=2" alt="SDC230L Project">
-</a>
+        <p>
+            This portfolio highlights some of the work I have completed and will continue to grow
+            as I gain more experience in software development.
+        </p>
+    </section>
 
-<a href="https://github.com/drboswellsr/SDC250" target="_blank">
-    <img src="https://picsum.photos/150/100?random=3" alt="SDC250 Project">
-</a>
-</section>
+    <hr>
 
-<section id="contact">
-<h2>Contact</h2>
+    <section id="projects">
+        <h2>Projects</h2>
 
-<form>
-<input type="text" placeholder="Name"><br><br>
-<input type="email" placeholder="Email"><br><br>
-<input type="text" placeholder="Subject"><br><br>
-<textarea placeholder="Message"></textarea><br><br>
-<button type="submit">Submit</button>
-</form>
-</section>
+        <p>Below are examples of projects I have completed during my coursework.</p>
 
-<script>
-// Ask for the user's name
-var name = prompt("Enter your name");
+        <a href="https://github.com/drboswellsr/Zions-Braid-Bar" target="_blank">
+            <img src="https://picsum.photos/150/100?random=1" alt="Zion's Braid Bar Project">
+        </a>
 
-// Display personalized greeting
-if(name){
-document.getElementById("welcomeMessage").innerHTML =
-"Welcome, " + name + "!";
-}
-</script>
+        <a href="https://github.com/drboswellsr/SDC230" target="_blank">
+            <img src="https://picsum.photos/150/100?random=2" alt="SDC230 Project">
+        </a>
+
+        <a href="https://github.com/drboswellsr/SDC330" target="_blank">
+            <img src="https://picsum.photos/150/100?random=3" alt="SDC330 Project">
+        </a>
+
+        <p>
+            Zion's Braid Bar | SDC230 | SDC330
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <form>
+            <label for="name">Sender Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        // Ask the user for their name
+        var userName = prompt("Please enter your name:");
+
+        // Display a personalized welcome message
+        if (userName) {
+            document.getElementById("welcomeMessage").innerHTML =
+                "Welcome, " + userName + "!";
+        }
+    </script>
 
 </body>
 </html>
