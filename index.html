@@ -1,93 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darrien's Portfolio</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Darrien's Portfolio</title>
+
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: white;
+         color: black;
+      }
+
+      header {
+         background-color: #222;
+         color: white;
+         padding: 20px;
+         text-align: center;
+      }
+
+      nav {
+         background-color: #333;
+         padding: 10px;
+         text-align: center;
+      }
+
+      nav a {
+         color: white;
+         margin: 15px;
+         text-decoration: none;
+      }
+
+      section {
+         padding: 25px;
+      }
+
+      .dark-toggle {
+         padding: 15px;
+         background-color: #eee;
+         text-align: center;
+      }
+
+      .featured-box {
+         border: 2px solid #333;
+         padding: 15px;
+         margin: 15px 0;
+         background-color: #f1f1f1;
+      }
+
+      .project-img {
+         width: 180px;
+         height: 120px;
+         object-fit: cover;
+         border: 2px solid #333;
+         margin: 10px;
+      }
+
+      form input, form textarea {
+         display: block;
+         width: 300px;
+         margin-bottom: 10px;
+         padding: 8px;
+      }
+
+      button {
+         padding: 10px 15px;
+         cursor: pointer;
+      }
+
+      .dark-mode {
+         background-color: #111;
+         color: white;
+      }
+
+      .dark-mode header,
+      .dark-mode nav {
+         background-color: black;
+      }
+
+      .dark-mode .featured-box {
+         background-color: #222;
+         color: white;
+         border-color: white;
+      }
+
+      .dark-mode a {
+         color: lightblue;
+      }
+   </style>
 </head>
+
 <body>
 
-    <h1 id="welcomeMessage">Welcome to My Portfolio</h1>
+   <div class="dark-toggle">
+      <label>
+         <input type="checkbox" id="darkModeToggle">
+         Dark Mode
+      </label>
+   </div>
 
-    <nav>
-        <a href="#about">About</a> |
-        <a href="#projects">Projects</a> |
-        <a href="#contact">Contact</a>
-    </nav>
+   <header>
+      <h1>Darrien Raines-Boswell's Portfolio</h1>
+      <p id="welcomeMessage"></p>
+   </header>
 
-    <hr>
+   <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+   </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
+   <main>
 
-        <p>
-            My name is Darrien and I am currently a Software Development student at ECPI University.
-            Throughout my coursework I have been learning programming, web development, and software
-            design while building projects that strengthen my technical skills.
-        </p>
+      <section id="about">
+         <h2>About Me</h2>
+         <p>
+            My name is Darrien Raines-Boswell. I am a Software Development student at ECPI University.
+            I am building my skills in web design, programming, and creating projects that can be used in real life.
+         </p>
 
-        <p>
-            This portfolio contains examples of projects I have completed and serves as a place to
-            showcase my work as I continue progressing through my degree program.
-        </p>
-    </section>
+         <h3>Skills and Technologies</h3>
+         <ul id="skillsList"></ul>
+      </section>
 
-    <hr>
+      <section id="featured">
+         <h2>Featured Content</h2>
 
-    <section id="projects">
-        <h2>Projects</h2>
+         <div id="universityResources" class="featured-box">
+            <h3>University Resources</h3>
+            <p>
+               <a href="https://www.ecpi.edu/programs/software-development-bachelors-degree" target="_blank">
+                  ECPI Software Development Program
+               </a>
+            </p>
+         </div>
 
-        <p>Below are a few projects from my GitHub repositories.</p>
+         <div id="personalProjects" class="featured-box">
+            <h3>Personal Projects</h3>
 
-        <a href="https://github.com/drboswellsr/Zions-Braid-Bar" target="_blank">
-            <img src="https://picsum.photos/150/100?random=1" alt="Zion's Braid Bar Project">
-        </a>
+            <a href="https://github.com/drboswellsr/Zions-Braid-Bar" target="_blank">
+               <img src="https://via.placeholder.com/180x120?text=Zions+Braid+Bar" alt="Zions Braid Bar" class="project-img">
+            </a>
 
-        <a href="https://github.com/drboswellsr/frontline-defense-blog" target="_blank">
-            <img src="https://picsum.photos/150/100?random=2" alt="Frontline Defense Blog Project">
-        </a>
+            <a href="https://github.com/drboswellsr/frontline-defense-blog" target="_blank">
+               <img src="https://via.placeholder.com/180x120?text=Frontline+Defense" alt="Frontline Defense Blog" class="project-img">
+            </a>
 
-        <a href="https://github.com/drboswellsr/darrai9918-Storefront" target="_blank">
-            <img src="https://picsum.photos/150/100?random=3" alt="Storefront Project">
-        </a>
+            <a href="https://github.com/drboswellsr/darrai9918-Storefront" target="_blank">
+               <img src="https://via.placeholder.com/180x120?text=Storefront" alt="Storefront Project" class="project-img">
+            </a>
+         </div>
+      </section>
 
-        <p>
-            Zion's Braid Bar | Frontline Defense Blog | Storefront
-        </p>
-    </section>
+      <section id="projects">
+         <h2>Projects</h2>
 
-    <hr>
+         <p>Here are three projects I have worked on:</p>
 
-    <section id="contact">
-        <h2>Contact</h2>
+         <a href="https://github.com/drboswellsr/Zions-Braid-Bar" target="_blank">
+            <img src="https://via.placeholder.com/180x120?text=Zions+Braid+Bar" alt="Zions Braid Bar" class="project-img">
+         </a>
 
-        <form>
-            <label for="name">Sender Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+         <a href="https://github.com/drboswellsr/frontline-defense-blog" target="_blank">
+            <img src="https://via.placeholder.com/180x120?text=Frontline+Defense" alt="Frontline Defense Blog" class="project-img">
+         </a>
 
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" name="email"><br><br>
+         <a href="https://github.com/drboswellsr/darrai9918-Storefront" target="_blank">
+            <img src="https://via.placeholder.com/180x120?text=Storefront" alt="Storefront Project" class="project-img">
+         </a>
+      </section>
 
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject"><br><br>
+      <section id="contact">
+         <h2>Contact Me</h2>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+         <form id="contactForm">
+            <label for="senderName">Name:</label>
+            <input type="text" id="senderName" name="senderName">
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
 
-    <script>
-        // Ask the user for their name
-        var userName = prompt("Please enter your name:");
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
 
-        // Update the greeting message
-        if (userName) {
-            document.getElementById("welcomeMessage").innerHTML =
-                "Welcome, " + userName + "!";
-        }
-    </script>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit" id="submitButton">Submit</button>
+         </form>
+      </section>
+
+   </main>
+
+   <script>
+      // Personalized welcome message
+      let visitorName = prompt("What is your name?");
+      document.getElementById("welcomeMessage").innerHTML = "Welcome, " + visitorName + "!";
+
+      // Skills array displayed with a loop
+      let skills = ["HTML", "CSS", "JavaScript", "Git", "GitHub"];
+      let skillsList = document.getElementById("skillsList");
+
+      skills.forEach(function(skill) {
+         let listItem = document.createElement("li");
+         listItem.textContent = skill;
+         skillsList.appendChild(listItem);
+      });
+
+      // Conditional logic for featured content
+      let projectImages = document.querySelectorAll("#projects img");
+      let universityResources = document.getElementById("universityResources");
+      let personalProjects = document.getElementById("personalProjects");
+
+      if (projectImages.length < 3) {
+         universityResources.style.display = "block";
+         personalProjects.style.display = "block";
+      } else {
+         universityResources.style.display = "none";
+         personalProjects.style.display = "block";
+      }
+
+      // Dark mode slider
+      let darkModeToggle = document.getElementById("darkModeToggle");
+
+      darkModeToggle.addEventListener("change", function() {
+         document.body.classList.toggle("dark-mode");
+      });
+
+      // Contact form submit message
+      let contactForm = document.getElementById("contactForm");
+
+      contactForm.addEventListener("submit", function(event) {
+         event.preventDefault();
+
+         let name = document.getElementById("senderName").value;
+
+         if (name === "") {
+            name = "visitor";
+         }
+
+         alert("Thank you, " + name + ", your message has been sent!");
+      });
+   </script>
 
 </body>
 </html>
